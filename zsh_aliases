@@ -1,0 +1,74 @@
+#! /bin/zsh
+
+alias al='vim ~/.zsh_aliases ; . ~/.zsh_aliases'
+alias task='ps auxw | head -n1 ; ps auxw | grep -v grep | grep'
+alias h='history | grep'
+alias cp='cp --preserve=mode,timestamps'
+alias pg='sudo -u postgres'
+alias ack='ack-grep'
+alias givm='gvim'
+alias lsd="echo \"DON'T DO DRUGS!!!\" ; ls"
+
+alias be='bundle exec'
+alias bi='bundle install'
+alias bu='bundle update'
+
+compdef _aptitude ap
+compdef _root_command pg
+
+# git stuff
+alias ci='git commit'
+alias co='git checkout'
+alias st='git status'
+alias rb='git rebase'
+alias br='git branch'
+alias log='git log --oneline --graph --branches --decorate'
+alias gk='gitk --all &'
+alias ga='git add'
+alias pa='ga --patch'
+alias a.='ga .'
+alias gd='git diff'
+alias gdc='gd --cached'
+alias gs='git stash'
+alias gsa='gs apply'
+alias gsk='gs -k'
+alias gm='git merge --no-ff'
+alias gmff='git merge --ff'
+
+compdef _git_commit ci
+compdef _git_checkout co
+compdef _git_rebase rb
+compdef _git_svn_rebase srb
+compdef _git_branch br
+compdef _git_add ga
+compdef _git_diff gd
+compdef _git_stash gs
+compdef _git_merge gm
+compdef _git_merge gmff
+
+# git flow
+alias gf='git flow'
+alias gff='git flow feature'
+alias gfr='git flow release'
+alias gfh='git flow hotfix'
+
+# Heroku
+alias hl='heroku logs --tail'
+alias hc='heroku console'
+
+# Locomotive Editor
+alias le='locomotive_editor'
+
+# Rails
+
+function findroot()
+{
+    while [ ! -e config/environment.rb  -a  `pwd` != '/' ]
+    do
+        cd ..
+    done
+
+    [ `pwd` != '/' ] && pwd
+}
+
+alias cdr='rr=`findroot` ; [ z$rr != z ] && cd $rr'

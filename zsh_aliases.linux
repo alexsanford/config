@@ -1,0 +1,12 @@
+#! /bin/zsh
+
+alias ap='sudo aptitude'
+alias upup='ap update && ap upgrade'
+
+function o()
+{
+    for file in "$@"
+    do
+        gnome-open "$file"
+    done
+}
