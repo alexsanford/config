@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 $mydir = File.expand_path(File.dirname(__FILE__))
-$files = %w{zshrc zsh_aliases zshenv}
+$files = %w{zshrc zsh_aliases zshenv vimrc gvimrc vim tmux.conf}
 $extensions = %w{osx linux}
 
 def link(file)

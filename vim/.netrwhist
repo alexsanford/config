@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/alex/colibri/hummingbird_cli/tmp/harvest_design/content_entries/blog_entries'
+let g:netrw_dirhist_2='/home/alex/colibri/hummingbird_cli/tmp/harvest_design/content_entries/current_events_entries'
+let g:netrw_dirhist_3='/data/alex/tmp/harvest_design/hb11app/script'
+let g:netrw_dirhist_4='/home/alex/config/vim'
