@@ -7,11 +7,11 @@ $extensions = %w{osx linux}
 def link(file)
   filepath = File.join($mydir, file)
   if File.exist?(filepath)
-    home_file = `echo $HOME/.#{file}`
-    puts "hf: #{home_file}"
-    puts "exists?: #{File.exist?(home_file)}"
+    home_file = File.join(Dir::home, ".#{file}")
     if File.exist?(home_file)
-      puts "Not overwriting #{home_file}"
+      unless File.realpath(home_file) == File.realpath(filepath)
+        puts "WARNING: Not overwriting #{home_file}"
+      end
     else
       `ln -s #{filepath} #{home_file}`
     end
