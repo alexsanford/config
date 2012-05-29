@@ -1,10 +1,7 @@
 colorscheme murphy
 set columns=80
 
-let localconfig = $HOME + "/.gvimrc.local"
-echo "Hi!"
-echo localconfig
+let localconfig = $HOME . "/.gvimrc.local"
 if filereadable(localconfig)
-    echo "Hello"
-    source localconfig
+    exec ":source " . localconfig
 endif
