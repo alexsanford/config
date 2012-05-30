@@ -16,6 +16,10 @@ alias bu='bundle update'
 compdef _aptitude ap
 compdef _root_command pg
 
+# ls aliases
+alias la='ls -A'
+alias ll='ls -l'
+
 # git stuff
 alias ci='git commit'
 alias co='git checkout'
