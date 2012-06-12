@@ -19,6 +19,9 @@ fi
 
 setopt interactivecomments
 
+# Keys
+bindkey -v "^S" push-line # (stash) push current command into buffer, then pull back
+
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
