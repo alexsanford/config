@@ -16,6 +16,9 @@ alias bu='bundle update'
 compdef _aptitude ap
 compdef _root_command pg
 
+alias tf='tmuxifier'
+compdef _tmuxifier tf
+
 # ls aliases
 alias la='ls -A'
 alias ll='ls -l'

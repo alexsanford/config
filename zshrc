@@ -22,6 +22,10 @@ setopt interactivecomments
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+# Tmuxifier
+[[ -s "$HOME/.tmuxifier/init.sh" ]] && source "$HOME/.tmuxifier/init.sh"
+
+
 # Aliases, OS specific config, and local config
 [[ -s $HOME/.zsh_aliases ]] && source $HOME/.zsh_aliases
 if [[ `uname` = 'Darwin' ]]
