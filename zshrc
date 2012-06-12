@@ -14,7 +14,7 @@ then
 
   source $ZSH/oh-my-zsh.sh
 else
-  echo 'PLEASE INSTALL OH MY ZSH (https://github.com/alexsanford/oh-my-zsh)'
+  echo 'PLEASE INSTALL OH MY ZSH (git clone git@github.com:alexsanford/oh-my-zsh ~/.oh-my-zsh)'
 fi
 
 setopt interactivecomments

@@ -12,3 +12,5 @@ then
     [[ -s $HOME/.zshenv.linux ]] && source $HOME/.zshenv.linux
 fi
 [[ -s $HOME/.zshenv.local ]] && source $HOME/.zshenv.local
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

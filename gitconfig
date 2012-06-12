@@ -1,0 +1,17 @@
+[user]
+    name = Alex Sanford
+    email = alex.sanford1@gmail.com
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+[core]
+    editor = vim
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    vimdiff = difftool -t vimdiff
+    gvimdiff = difftool -t gvimdiff
+    kompare = difftool -t kompare
