@@ -48,6 +48,9 @@ syntax on
 
 com W w
 com Q q
+com Wq wq
+com WQ wq
+
 set ruler
 
 runtime macros/matchit.vim
