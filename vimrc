@@ -24,6 +24,9 @@ else
     au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
+" Trailing whitespace
+au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\s\+$', -1)
+
 au BufWinEnter *.txt,*.tex set spell
 
 map <C-h> <C-w>h
