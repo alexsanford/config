@@ -68,3 +68,7 @@ nmap gk :Gitv --all<cr>
 nmap gK :Gitv! --all<cr>
 
 map \ O
+
+" AutoPairs Plugin
+let g:AutoPairsFlyMode = 1
+let g:AutoPairsShortcutBackInsert="<C-b>"
