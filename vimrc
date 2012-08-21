@@ -24,6 +24,9 @@ else
     au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
+" Trailing whitespace
+au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\s\+$', -1)
+
 au BufWinEnter *.txt,*.tex set spell
 
 map <C-h> <C-w>h
@@ -48,6 +51,9 @@ syntax on
 
 com W w
 com Q q
+com Wq wq
+com WQ wq
+
 set ruler
 
 runtime macros/matchit.vim
@@ -62,3 +68,7 @@ nmap gk :Gitv --all<cr>
 nmap gK :Gitv! --all<cr>
 
 map \ O
+
+" AutoPairs Plugin
+let g:AutoPairsFlyMode = 1
+let g:AutoPairsShortcutBackInsert="<C-b>"
