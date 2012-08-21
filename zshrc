@@ -25,6 +25,9 @@ bindkey -v "^S" push-line # (stash) push current command into buffer, then pull 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+# Pythonbrew
+[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
+
 # Aliases, OS specific config, and local config
 [[ -s $HOME/.zsh_aliases ]] && source $HOME/.zsh_aliases
 if [[ `uname` = 'Darwin' ]]
