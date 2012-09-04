@@ -72,3 +72,10 @@ map \ O
 " AutoPairs Plugin
 let g:AutoPairsFlyMode = 1
 let g:AutoPairsShortcutBackInsert="<C-b>"
+
+" NERDTree Plugin
+map  :NERDTreeToggle<CR>
+imap  <Esc>:NERDTreeToggle<CR>
+let NERDChristmasTree=1
+let NERDTreeShowBookmarks=1
+let NERDTreeShowHidden=1
