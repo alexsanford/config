@@ -32,6 +32,8 @@
 :TextobjRubyblockDefaultKeyMappings	textobj-rubyblock.txt	/*:TextobjRubyblockDefaultKeyMappings*
 <Plug>(textobj-rubyblock-a)	textobj-rubyblock.txt	/*<Plug>(textobj-rubyblock-a)*
 <Plug>(textobj-rubyblock-i)	textobj-rubyblock.txt	/*<Plug>(textobj-rubyblock-i)*
+AutosessRestore()	autosess.txt	/*AutosessRestore()*
+AutosessUpdate()	autosess.txt	/*AutosessUpdate()*
 NERDTree	NERD_tree.txt	/*NERDTree*
 NERDTree-?	NERD_tree.txt	/*NERDTree-?*
 NERDTree-A	NERD_tree.txt	/*NERDTree-A*
@@ -91,6 +93,12 @@ NERDTreeOptionSummary	NERD_tree.txt	/*NERDTreeOptionSummary*
 NERDTreeOptions	NERD_tree.txt	/*NERDTreeOptions*
 NERDTreeRender()	NERD_tree.txt	/*NERDTreeRender()*
 NERD_tree.txt	NERD_tree.txt	/*NERD_tree.txt*
+autosess	autosess.txt	/*autosess*
+autosess-commands	autosess.txt	/*autosess-commands*
+autosess-functions	autosess.txt	/*autosess-functions*
+autosess-mappings	autosess.txt	/*autosess-mappings*
+autosess-settings	autosess.txt	/*autosess-settings*
+autosess.txt	autosess.txt	/*autosess.txt*
 coffee-script	coffee-script.txt	/*coffee-script*
 coffee-script-author	coffee-script.txt	/*coffee-script-author*
 coffee-script-commands	coffee-script.txt	/*coffee-script-commands*
