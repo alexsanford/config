@@ -74,8 +74,9 @@ let g:AutoPairsFlyMode = 1
 let g:AutoPairsShortcutBackInsert="<C-b>"
 
 " Fuzzy matching
-map f :FufFile
-map F :FufFileWithCurrentBufferDir
+map ff :FufFile
+map fF :FufFileWithCurrentBufferDir
+map fl :FufLine
 
 " NERDTree Plugin
 map  :NERDTreeToggle<CR>
