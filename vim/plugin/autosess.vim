@@ -42,6 +42,7 @@ function AutosessRestore()
 			execute bufnr . 'bwipeout!'
 		endfor
 	endif
+    execute 'source ~/.vimrc'
 endfunction
 
 function AutosessUpdate()
