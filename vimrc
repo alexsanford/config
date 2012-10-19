@@ -69,6 +69,9 @@ nmap gK :Gitv! --all<cr>
 
 map \ O
 
+" Run latest command in 'test' tmux session
+map TT :!tmux send-keys -t test Up Enter<Enter><Enter>
+
 " AutoPairs Plugin
 let g:AutoPairsFlyMode = 1
 let g:AutoPairsShortcutBackInsert="<C-b>"
