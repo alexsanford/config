@@ -32,6 +32,8 @@ unsetopt nomatch
 # Tmuxifier
 [[ -s "$HOME/.tmuxifier/init.sh" ]] && source "$HOME/.tmuxifier/init.sh"
 
+# Pythonbrew
+[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
 
 # Aliases, OS specific config, and local config
 [[ -s $HOME/.zsh_aliases ]] && source $HOME/.zsh_aliases
