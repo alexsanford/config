@@ -79,3 +79,6 @@ imap  <Esc>:NERDTreeToggle<CR>
 let NERDChristmasTree=1
 let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1
+
+" Autosess plugin
+autocmd BufWinEnter * if !exists("SessionLoad") | call AutosessUpdate() | endif
