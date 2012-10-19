@@ -24,6 +24,7 @@ setopt interactivecomments
 
 # Too annoying
 unsetopt correct_all
+unsetopt nomatch
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

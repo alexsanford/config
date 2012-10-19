@@ -76,3 +76,10 @@ let g:AutoPairsShortcutBackInsert="<C-b>"
 " Fuzzy matching
 map f :FufFile
 map F :FufFileWithCurrentBufferDir
+
+" NERDTree Plugin
+map  :NERDTreeToggle<CR>
+imap  <Esc>:NERDTreeToggle<CR>
+let NERDChristmasTree=1
+let NERDTreeShowBookmarks=1
+let NERDTreeShowHidden=1
