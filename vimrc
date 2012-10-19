@@ -72,3 +72,7 @@ map \ O
 " AutoPairs Plugin
 let g:AutoPairsFlyMode = 1
 let g:AutoPairsShortcutBackInsert="<C-b>"
+
+" Fuzzy matching
+map f :FufFile
+map F :FufFileWithCurrentBufferDir
