@@ -80,7 +80,6 @@ let g:AutoPairsShortcutBackInsert="<C-b>"
 map ff :FufFile
 map fF :FufFileWithCurrentBufferDir
 map fl :FufLine
-map fb :FufBuffer
 
 " NERDTree Plugin
 map  :NERDTreeToggle<CR>
