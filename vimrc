@@ -69,6 +69,8 @@ nmap gK :Gitv! --all<cr>
 
 map \ O
 
+map gi gg=G''
+
 " Run latest command in 'test' tmux session
 map TT :!tmux send-keys -t test Up Enter<Enter><Enter>
 
@@ -80,6 +82,7 @@ let g:AutoPairsShortcutBackInsert="<C-b>"
 map ff :FufFile
 map fF :FufFileWithCurrentBufferDir
 map fl :FufLine
+map fb :FufBuffer
 
 " NERDTree Plugin
 map  :NERDTreeToggle<CR>
