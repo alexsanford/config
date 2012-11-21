@@ -8,7 +8,6 @@ set backup
 set wildmode=list:longest,full
 
 syntax enable
-set background=dark
 
 set incsearch
 set ignorecase
@@ -17,6 +16,9 @@ set linebreak
 set scrolloff=3
 
 set mouse=a
+
+" Custom colorscheme
+colorscheme vim_default
 
 if exists('+colorcolumn')
     set colorcolumn=80
