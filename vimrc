@@ -36,6 +36,7 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+set virtualedit=all
 
 inoremap { {}O
 inoremap /** /**/ki<End> 
