@@ -83,3 +83,7 @@ function findroot()
 }
 
 alias cdr='rr=`findroot` ; [ z$rr != z ] && cd $rr'
+
+# Apache
+
+alias a2='sudo service apache2'
