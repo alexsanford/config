@@ -2,6 +2,8 @@ colorscheme murphy
 set columns=80
 set lines=55
 
+set mouse=a
+
 let localconfig = $HOME . "/.gvimrc.local"
 if filereadable(localconfig)
     exec ":source " . localconfig

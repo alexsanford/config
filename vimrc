@@ -15,7 +15,7 @@ set linebreak
 
 set scrolloff=3
 
-set mouse=a
+set mouse=nicr
 
 " Custom colorscheme
 colorscheme murphy
