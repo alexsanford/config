@@ -71,8 +71,9 @@ nmap gk :Gitv --all<cr>
 nmap gK :Gitv! --all<cr>
 
 map \ O
-
 map gi gg=G''
+nmap <Space> ^
+nmap <Enter> $
 
 " Run latest command in 'test' tmux session
 map TT :!tmux send-keys -t test Up Enter<Enter><Enter>
