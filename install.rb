@@ -25,3 +25,7 @@ $files.each do |file|
     link file + ext
   end
 end
+
+# Color setup
+puts 'Make sure to set up the correct color reporting in the terminal!'
+puts '  May need to change the command to `env TERM=xterm-256color /bin/zsh`'

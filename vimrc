@@ -18,7 +18,7 @@ set scrolloff=3
 set mouse=a
 
 " Custom colorscheme
-colorscheme vim_default
+colorscheme murphy
 
 if exists('+colorcolumn')
     set colorcolumn=80
