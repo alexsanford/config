@@ -29,7 +29,7 @@ endif
 " Trailing whitespace
 au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\s\+$', -1)
 
-au BufWinEnter *.txt,*.tex set spell
+au BufWinEnter *.txt,*.tex,*.otl set spell
 
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -37,11 +37,6 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 set virtualedit=all
-
-inoremap { {}O
-inoremap /** /**/ki<End> 
-inoremap /* /*/ki<End> 
-iab jmain public static void main(String[] args)<CR>{o}<Up>A
 
 set directory=~/tmp/.vim
 set backupdir=~/tmp/.vim
