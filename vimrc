@@ -5,7 +5,13 @@ set tabstop=4
 set smarttab
 set shiftwidth=4
 set backup
+
+set wildmenu
 set wildmode=list:longest,full
+
+" Get out of the menu by using the \ key
+" Put in a literal \ with <Ctrl-V>\
+cmap \ \<BS>
 
 syntax enable
 
