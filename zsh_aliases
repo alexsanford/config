@@ -84,6 +84,13 @@ function findroot()
 
 alias cdr='rr=`findroot` ; [ z$rr != z ] && cd $rr'
 
+# Ruby
+
+function puts_prompt
+{
+    export RUBY_PUTS_PROMPT=yes
+}
+
 # Apache
 
 alias a2='sudo service apache2'
