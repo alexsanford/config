@@ -95,3 +95,6 @@ imap  <Esc>:NERDTreeToggle<CR>
 let NERDChristmasTree=1
 let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1
+
+" Filetype settings
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
