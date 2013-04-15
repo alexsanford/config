@@ -1,1 +1,0 @@
---skip-active-record --skip-test-unit --skip-bundle -m ~/config/rails/app_template.rb
