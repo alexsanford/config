@@ -80,8 +80,8 @@ nmap <Enter> $
 map TT :!tmux send-keys -t test Up Enter<Enter><Enter>
 
 " AutoPairs Plugin
-let g:AutoPairsFlyMode = 1
-let g:AutoPairsShortcutBackInsert="<C-b>"
+"let g:AutoPairsFlyMode = 1
+"let g:AutoPairsShortcutBackInsert="<C-b>"
 
 " Fuzzy matching
 map ff :FufFile
