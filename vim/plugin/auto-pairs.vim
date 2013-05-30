@@ -61,6 +61,12 @@ if !exists('g:AutoPairsShortcutBackInsert')
   let g:AutoPairsShortcutBackInsert = '<M-b>'
 endif
 
+" Set this option for flymode to only search on the current line for the
+" closing character
+if !exists('g:AutoPairsFlyModeOnlyCurrentLine')
+  let g:AutoPairsFlyModeOnlyCurrentLine = 0
+endif
+
 
 " Will auto generated {']' => '[', ..., '}' => '{'}in initialize.
 let g:AutoPairsClosedPairs = {}
@@ -114,7 +120,15 @@ function! AutoPairsInsert(key)
 
     " Fly Mode, and the key is closed-pairs, search closed-pair and jump
     if g:AutoPairsFlyMode && has_key(g:AutoPairsClosedPairs, a:key)
-      if search(a:key, 'W')
+      if g:AutoPairsFlyModeOnlyCurrentLine
+        let flags = ''
+        let line = line('.')
+      else
+        let flags = 'W'
+        let line = 0
+      endif
+
+      if search(a:key, flags, line)
         return "\<Right>"
       endif
     endif
