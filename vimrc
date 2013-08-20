@@ -68,8 +68,9 @@ endif
 
 cabbrev git Git
 
-nmap gk :Gitv --all<cr>
-nmap gK :Gitv! --all<cr>
+" Remove these mappings for now. gk is useful for long lines
+" nmap gk :Gitv --all<cr>
+" nmap gK :Gitv! --all<cr>
 
 map \ O
 map gi gg=G''
