@@ -72,7 +72,7 @@ cabbrev git Git
 " nmap gk :Gitv --all<cr>
 " nmap gK :Gitv! --all<cr>
 
-map \ O
+map \ O<Enter>
 map gi gg=G''
 nmap <Space> ^
 nmap <Enter> $
