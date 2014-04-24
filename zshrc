@@ -27,7 +27,10 @@ unsetopt correct_all
 unsetopt nomatch
 
 # RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
+
+# NVM
+[[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
 
 # Tmuxifier
 [[ -s "$HOME/.tmuxifier/init.sh" ]] && source "$HOME/.tmuxifier/init.sh"
@@ -48,3 +51,5 @@ then
 fi
 [[ -s $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
 [[ -s $HOME/.zsh_aliases.local ]] && source $HOME/.zsh_aliases.local
+
+[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM

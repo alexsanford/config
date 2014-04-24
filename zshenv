@@ -20,4 +20,4 @@ then
 fi
 [[ -s $HOME/.zshenv.local ]] && source $HOME/.zshenv.local
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=/usr/local/rvm/bin:$PATH # Add RVM to PATH for scripting
