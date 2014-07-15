@@ -15,3 +15,5 @@
     vimdiff = difftool -t vimdiff
     gvimdiff = difftool -t gvimdiff
     kompare = difftool -t kompare
+[push]
+	default = simple
