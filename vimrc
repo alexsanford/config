@@ -5,6 +5,35 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-sensible'
+
+Plugin 'auto-pairs'
+Plugin 'AutoTag'
+Plugin 'CSApprox'
+Plugin 'cucumber.zip'
+Plugin 'endwise.vim'
+Plugin 'fugitive.vim'
+Plugin 'FuzzyFinder'
+Plugin 'Haml'
+Plugin 'html5.vim'
+Plugin 'L9'
+Plugin 'less.vim'
+Plugin 'liquid.vim'
+Plugin 'matchit.zip'
+Plugin 'nginx.vim'
+Plugin 'powerman/vim-plugin-autosess'
+Plugin 'rails.vim'
+Plugin 'ruby.vim'
+Plugin 'ruby-matchit'
+Plugin 'Sass'
+Plugin 'scrooloose/nerdtree'
+Plugin 'SuperTab'
+Plugin 'surround.vim'
+Plugin 'vim-coffee-script'
+Plugin 'VimOutliner'
+Plugin 'yaml.vim'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -84,7 +113,8 @@ map TT :!tmux send-keys -t test Up Enter<Enter><Enter>
 " AutoPairs Plugin
 let g:AutoPairsFlyMode = 1
 let g:AutoPairsShortcutBackInsert="<C-b>"
-let g:AutoPairsFlyModeOnlyCurrentLine = 1
+" TODO: figure out a way to use my version
+" let g:AutoPairsFlyModeOnlyCurrentLine = 1
 
 " Fuzzy matching
 map ff :FufFile
