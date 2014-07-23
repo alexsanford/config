@@ -1,84 +1,85 @@
+""" Setup vundle
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+call vundle#end()
+filetype plugin indent on
+
+
+""" My preferences
+
 let mapleader=","
+
+filetype plugin indent on
+syntax enable
 
 set expandtab
 set tabstop=2
-set smarttab
 set shiftwidth=2
-set backup
+set smarttab
 
 set wildmenu
 set wildmode=list:longest,full
 
-" Get out of the menu by using the \ key
-" Put in a literal \ with <Ctrl-V>\
-cmap \ \<BS>
-
-syntax enable
-
 set incsearch
 set ignorecase
-set linebreak
 
+set linebreak
 set scrolloff=3
+set virtualedit=all
 
 set mouse=nicr
+set ruler
 
-" Custom colorscheme
 colorscheme murphy
 
+" Display 80th column
 if exists('+colorcolumn')
     set colorcolumn=80
 else
     au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
-" Trailing whitespace
+" Display trailing whitespace
 au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\s\+$', -1)
 
+" Spellcheck text files
 au BufWinEnter *.txt,*.tex,*.otl set spell
 
+" Make moving between windows a little easier
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-set virtualedit=all
-
-set directory=~/tmp/.vim
-set backupdir=~/tmp/.vim
-
-set completeopt=menuone,preview,longest
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-
-filetype plugin indent on
-syntax on
-
-com! W w
-com! Q q
-com! Wq wq
-com! WQ wq
-
-set ruler
-
-runtime macros/matchit.vim
-set nocompatible
-if has("autocmd")
-    filetype indent plugin on
-endif
-
-cabbrev git Git
-
-" Remove these mappings for now. gk is useful for long lines
-" nmap gk :Gitv --all<cr>
-" nmap gK :Gitv! --all<cr>
-
+" Some nice navigational shortcuts
 map \ O<Enter>
 map gi gg=G''
 nmap <Space> ^
 nmap <Enter> $
 
+" Significant directories
+set directory=~/tmp/.vim
+set backupdir=~/tmp/.vim
+set backup
+
+set completeopt=menuone,preview,longest
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+" Common mistakes
+com! W w
+com! Q q
+com! Wq wq
+com! WQ wq
+
 " Run latest command in 'test' tmux session
 map TT :!tmux send-keys -t test Up Enter<Enter><Enter>
+
+
+""" Plugin configuration
 
 " AutoPairs Plugin
 let g:AutoPairsFlyMode = 1
@@ -97,6 +98,3 @@ imap  <Esc>:NERDTreeToggle<CR>
 let NERDChristmasTree=1
 let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1
-
-" Filetype settings
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
