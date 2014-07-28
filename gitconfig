@@ -16,4 +16,4 @@
     gvimdiff = difftool -t gvimdiff
     kompare = difftool -t kompare
 [push]
-	default = simple
+	default = upstream
