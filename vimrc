@@ -23,6 +23,7 @@ Plugin 'less.vim'
 Plugin 'liquid.vim'
 Plugin 'matchit.zip'
 Plugin 'nginx.vim'
+Plugin 'pathogen.vim'
 Plugin 'powerman/vim-plugin-autosess'
 Plugin 'rails.vim'
 Plugin 'ruby.vim'
@@ -33,10 +34,14 @@ Plugin 'SuperTab'
 Plugin 'surround.vim'
 Plugin 'vim-coffee-script'
 Plugin 'VimOutliner'
+Plugin 'xml.vim'
+Plugin 'xmledit'
 Plugin 'yaml.vim'
 
 call vundle#end()
 filetype plugin indent on
+
+execute pathogen#infect('custom_bundle/{}')
 
 
 """ My preferences
