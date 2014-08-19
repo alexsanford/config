@@ -134,3 +134,6 @@ imap  <Esc>:NERDTreeToggle<CR>
 let NERDChristmasTree=1
 let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1
+
+" HTML indentation
+let g:html_indent_inctags = "html,body,head,tbody"
