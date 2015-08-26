@@ -4,11 +4,11 @@ export PAGER=less
 export PATH=$PATH:$HOME/bin
 
 # Ruby stuff
-if [[ -s "$HOME/.ruby/mystuff.rb" ]]
-then
-    export RUBYLIB="$HOME/.ruby"
-    export RUBYOPT="-r mystuff"
-fi
+#if [[ -s "$HOME/.ruby/mystuff.rb" ]]
+#then
+#    export RUBYLIB="$HOME/.ruby"
+#    export RUBYOPT="-r mystuff"
+#fi
 
 # OS Specific and local env files
 if [[ `uname` = 'Darwin' ]]
