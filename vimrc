@@ -10,7 +10,7 @@ Plugin 'tpope/vim-sensible'
 
 Plugin 'auto-pairs'
 Plugin 'AutoTag'
-Plugin 'cakebaker/cscc-syntax.vim'
+Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'CSApprox'
 Plugin 'endwise.vim'
 Plugin 'fugitive.vim'
