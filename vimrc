@@ -10,17 +10,19 @@ Plugin 'tpope/vim-sensible'
 
 Plugin 'auto-pairs'
 Plugin 'AutoTag'
+Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'CSApprox'
-Plugin 'cucumber.zip'
 Plugin 'endwise.vim'
 Plugin 'fugitive.vim'
 Plugin 'FuzzyFinder'
-Plugin 'tpope/vim-haml'
 Plugin 'html5.vim'
+Plugin 'JulesWang/css.vim'
 Plugin 'L9'
 Plugin 'LargeFile'
 Plugin 'less.vim'
 Plugin 'liquid.vim'
+Plugin 'LucHermitte/lh-vim-lib'
+Plugin 'LucHermitte/local_vimrc'
 Plugin 'matchit.zip'
 Plugin 'nginx.vim'
 Plugin 'pathogen.vim'
@@ -30,8 +32,11 @@ Plugin 'ruby.vim'
 Plugin 'ruby-matchit'
 Plugin 'Sass'
 Plugin 'scrooloose/nerdtree'
+"Plugin 'Smart-Tabs'
 Plugin 'SuperTab'
 Plugin 'surround.vim'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-cucumber'
 Plugin 'vim-coffee-script'
 Plugin 'VimOutliner'
 Plugin 'xml.vim'
@@ -49,12 +54,19 @@ execute pathogen#infect('custom_bundle/{}')
 let mapleader=","
 
 filetype plugin indent on
-syntax enable
 
 set expandtab
 set tabstop=2
 set shiftwidth=2
 set smarttab
+
+set copyindent
+set preserveindent
+set softtabstop=0
+
+set list
+set listchars=tab:>-,trail:~
+au VimEnter * hi SpecialKey ctermfg=238 guifg=#444444
 
 set wildmenu
 set wildmode=list:longest,full
@@ -137,3 +149,6 @@ let NERDTreeShowHidden=1
 
 " HTML indentation
 let g:html_indent_inctags = "html,body,head,tbody"
+
+syntax off
+syntax on
