@@ -17,3 +17,5 @@
     kompare = difftool -t kompare
 [push]
 	default = upstream
+[rerere]
+	enabled = true
