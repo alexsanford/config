@@ -25,6 +25,7 @@ Plugin 'LucHermitte/lh-vim-lib'
 Plugin 'LucHermitte/local_vimrc'
 Plugin 'matchit.zip'
 Plugin 'nginx.vim'
+Plugin 'ngmy/vim-rubocop'
 Plugin 'pangloss/vim-javascript'
 Plugin 'pathogen.vim'
 "Plugin 'powerman/vim-plugin-autosess'
@@ -41,6 +42,7 @@ Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-cucumber'
 Plugin 'vim-coffee-script'
 Plugin 'mxw/vim-jsx'
+Plugin 'vim-gitgutter'
 Plugin 'VimOutliner'
 Plugin 'xml.vim'
 Plugin 'xmledit'
@@ -152,6 +154,12 @@ let NERDTreeShowHidden=1
 
 " HTML indentation
 let g:html_indent_inctags = "html,body,head,tbody"
+
+" JSX indentation
+let g:jsx_ext_required = 0
+
+" JSON syntax highlighting
+au BufNewFile,BufRead *.json set ft=javascript
 
 syntax off
 syntax on
