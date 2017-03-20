@@ -94,3 +94,6 @@ function puts_prompt
 # Apache
 
 alias a2='sudo service apache2'
+
+# Utils
+alias port='sudo lsof -i -n -P | grep TCP | grep '

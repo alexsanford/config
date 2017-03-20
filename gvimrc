@@ -63,3 +63,6 @@ function! SetTabName(myarg)
 endfunction
 command! -nargs=1 SetTabName call SetTabName('<args>')
 map <C-A>, :SetTabName<Space>
+
+set macligatures
+set guifont=Fira\ Code:h12

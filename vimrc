@@ -12,6 +12,7 @@ Plugin 'auto-pairs'
 Plugin 'AutoTag'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'CSApprox'
+Plugin 'editorconfig/editorconfig-vim'
 Plugin 'endwise.vim'
 Plugin 'fugitive.vim'
 Plugin 'FuzzyFinder'
@@ -39,6 +40,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'SuperTab'
 Plugin 'surround.vim'
+Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-cucumber'
 Plugin 'vim-coffee-script'
@@ -161,6 +163,9 @@ let g:jsx_ext_required = 0
 
 " JSON syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
+
+" Case-preserving replace
+map S Subvert
 
 syntax off
 syntax on
