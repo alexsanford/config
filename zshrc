@@ -27,13 +27,10 @@ unsetopt correct_all
 unsetopt nomatch
 
 # History
-autoload history-search-end
-zle -N history-beginning-search-backward-end \
-       history-search-end
-zle -N history-beginning-search-forward-end \
-       history-search-end
-[[ -n "${key[Up]}"       ]] && bindkey  "${key[Up]}"      history-beginning-search-backward-end
-[[ -n "${key[Down]}"     ]] && bindkey  "${key[Down]}"    history-beginning-search-forward-end
+bindkey '^[[A' history-beginning-search-backward
+bindkey '^[OA' history-beginning-search-backward
+bindkey '^[[B' history-beginning-search-forward
+bindkey '^[OB' history-beginning-search-forward
 
 # RVM
 [[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
