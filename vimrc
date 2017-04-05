@@ -169,3 +169,6 @@ map S Subvert
 
 syntax off
 syntax on
+
+" OSX clipboard fix
+set clipboard=unnamed
