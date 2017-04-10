@@ -46,6 +46,7 @@ Plugin 'tpope/vim-cucumber'
 Plugin 'vim-coffee-script'
 Plugin 'mxw/vim-jsx'
 Plugin 'vim-gitgutter'
+"Plugin 'vim-syntastic/syntastic'
 Plugin 'VimOutliner'
 Plugin 'xml.vim'
 Plugin 'xmledit'
@@ -172,3 +173,13 @@ syntax on
 
 " OSX clipboard fix
 set clipboard=unnamed
+
+" Syntastic (add back in later)
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+"
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
