@@ -20,3 +20,5 @@
 	default = upstream
 [rerere]
 	enabled = true
+[diff "minjs"]
+  textconv = js-beautify
