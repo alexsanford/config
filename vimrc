@@ -16,39 +16,27 @@ Plugin 'digitaltoad/vim-pug'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'endwise.vim'
 Plugin 'fugitive.vim'
-Plugin 'FuzzyFinder'
 Plugin 'JulesWang/css.vim'
-Plugin 'L9'
 Plugin 'LargeFile'
 Plugin 'less.vim'
 Plugin 'liquid.vim'
-Plugin 'LucHermitte/lh-vim-lib'
-Plugin 'LucHermitte/local_vimrc'
 Plugin 'matchit.zip'
 Plugin 'nginx.vim'
-Plugin 'ngmy/vim-rubocop'
 Plugin 'othree/html5.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'pathogen.vim'
 Plugin 'posva/vim-vue'
-"Plugin 'powerman/vim-plugin-autosess'
 Plugin 'rails.vim'
 Plugin 'ruby.vim'
 Plugin 'ruby-matchit'
 Plugin 'Sass'
-Plugin 'scrooloose/nerdtree'
-"Plugin 'Smart-Tabs'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'SuperTab'
 Plugin 'surround.vim'
+Plugin 'tagbar'
 Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-cucumber'
-Plugin 'vim-coffee-script'
 Plugin 'mxw/vim-jsx'
 Plugin 'vim-gitgutter'
-"Plugin 'vim-syntastic/syntastic'
-Plugin 'VimOutliner'
 Plugin 'xml.vim'
 Plugin 'xmledit'
 Plugin 'yaml.vim'
@@ -65,10 +53,8 @@ let mapleader=","
 
 filetype plugin indent on
 
-set expandtab
 set tabstop=4
-set shiftwidth=2
-set smarttab
+set shiftwidth=4
 
 set copyindent
 set preserveindent
@@ -144,19 +130,6 @@ let g:AutoPairsShortcutBackInsert="<C-b>"
 " TODO: figure out a way to use my version
 " let g:AutoPairsFlyModeOnlyCurrentLine = 1
 
-" Fuzzy matching
-map ff :FufFile
-map fF :FufFileWithCurrentBufferDir
-map fl :FufLine
-map fb :FufBuffer
-
-" NERDTree Plugin
-map  :NERDTreeToggle<CR>
-imap  <Esc>:NERDTreeToggle<CR>
-let NERDChristmasTree=1
-let NERDTreeShowBookmarks=1
-let NERDTreeShowHidden=1
-
 " HTML indentation
 let g:html_indent_inctags = "html,body,head,tbody"
 
@@ -175,12 +148,8 @@ syntax on
 " OSX clipboard fix
 set clipboard=unnamed
 
-" Syntastic (add back in later)
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-"
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
+" Mouse fix
+set ttymouse=sgr
+
+" Tagbar
+:nnoremap <silent> <Leader>b :TagbarToggle<CR><CR>

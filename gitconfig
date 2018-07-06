@@ -16,9 +16,12 @@
     gvimdiff = difftool -t gvimdiff
     kompare = difftool -t kompare
     mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
+	ctags = !.git/hooks/ctags
 [push]
 	default = upstream
 [rerere]
 	enabled = true
 [diff "minjs"]
   textconv = js-beautify
+[init]
+	templatedir = ~/.git_template
