@@ -148,7 +148,7 @@ syntax on
 " OSX clipboard fix
 set clipboard=unnamed
 
-" Mouse fix
+" Mouse fix for wide terminals
 set ttymouse=sgr
 
 " Tagbar
