@@ -54,9 +54,6 @@ let mapleader=","
 
 filetype plugin indent on
 
-set tabstop=4
-set shiftwidth=4
-
 set copyindent
 set preserveindent
 set softtabstop=0
