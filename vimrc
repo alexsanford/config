@@ -1,3 +1,8 @@
+" Skip Python3 warnings on OSX
+if has('python3')
+  silent! python3 1
+endif
+
 """ Setup vundle
 set nocompatible
 filetype off
@@ -79,9 +84,9 @@ colorscheme murphy
 
 " Display 80th column
 if exists('+colorcolumn')
-    set colorcolumn=80
+  set colorcolumn=80
 else
-    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
 " Display trailing whitespace
