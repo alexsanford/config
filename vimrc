@@ -59,6 +59,11 @@ let mapleader=","
 
 filetype plugin indent on
 
+" Default indentation
+set noexpandtab
+set shiftwidth=4
+set tabstop=4
+
 set copyindent
 set preserveindent
 set softtabstop=0
