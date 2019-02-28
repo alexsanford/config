@@ -73,8 +73,10 @@ export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s /usr/local/bin/pyenv ]] && eval "$(/usr/local/bin/pyenv init -)"
 
 # Tmuxinator completion
-if [[ which tmuxinator >/dev/null ]]
+if which tmuxinator >/dev/null
 then
+  export TMUXINATOR_CONFIG=$HOME/code/tmuxinator-projects/
+
   _tmuxinator() {
     local commands projects
     commands=(${(f)"$(tmuxinator commands zsh)"})
