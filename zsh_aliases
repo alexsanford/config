@@ -47,6 +47,7 @@ alias gsa='gs apply'
 alias gsk='gs -k'
 alias gm='git merge --no-ff'
 alias gmff='git merge --ff'
+alias gpo='git push -u origin `git branch | grep \* | cut -d " " -f2`'
 
 compdef _git_commit ci
 compdef _git_checkout co
