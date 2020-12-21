@@ -3,18 +3,19 @@
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
+ZSH_CUSTOM=$HOME/config/oh-my-zsh
 
 if [[ -d $ZSH ]]
 then
   ZSH_THEME="alex"
   DISABLE_AUTO_TITLE="true"
-  plugins=(git bundler gem heroku rails3 rvm tmux)
+  plugins=(git bundler gem heroku rvm tmux)
 
   [[ `uname` = 'Darwin' ]] && plugins+=osx
 
   source $ZSH/oh-my-zsh.sh
 else
-  echo 'PLEASE INSTALL OH MY ZSH (git clone git@github.com:alexsanford/oh-my-zsh ~/.oh-my-zsh)'
+  echo 'PLEASE INSTALL OH MY ZSH (git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh)'
 fi
 
 setopt interactivecomments
