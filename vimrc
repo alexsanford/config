@@ -26,9 +26,12 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'endwise.vim'
 Plugin 'fugitive.vim'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 Plugin 'less.vim'
 Plugin 'liquid.vim'
 Plugin 'matchit.zip'
+Plugin 'michal-h21/vim-zettel'
 Plugin 'mxw/vim-jsx'
 Plugin 'nginx.vim'
 Plugin 'othree/html5.vim'
@@ -43,6 +46,7 @@ Plugin 'surround.vim'
 Plugin 'tagbar'
 Plugin 'tpope/vim-abolish'
 Plugin 'vim-gitgutter'
+Plugin 'vimwiki/vimwiki'
 Plugin 'xml.vim'
 Plugin 'xmledit'
 Plugin 'yaml.vim'
@@ -161,3 +165,17 @@ set ttymouse=sgr
 
 " Tagbar
 :nnoremap <silent> <Leader>b :TagbarToggle<CR><CR>
+
+" vim-zettel and vimwiki
+let g:zettel_default_mappings = 0
+augroup filetype_vimwiki
+  autocmd!
+  autocmd FileType vimwiki unlet g:AutoPairs['[']
+  autocmd FileType vimwiki imap <silent> [[ [[<esc><Plug>ZettelSearchMap
+  autocmd FileType vimwiki nmap T <Plug>ZettelYankNameMap
+  autocmd FileType vimwiki xmap z <Plug>ZettelNewSelectedMap
+  autocmd FileType vimwiki nmap gZ <Plug>ZettelReplaceFileWithLink
+augroup END
+
+let g:vimwiki_list = [{'auto_tags': 1}]
+let g:vimwiki_table_mappings = 0
