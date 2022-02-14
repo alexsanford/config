@@ -11,7 +11,7 @@ then
   DISABLE_AUTO_TITLE="true"
   plugins=(git bundler gem heroku rvm tmux)
 
-  [[ `uname` = 'Darwin' ]] && plugins+=osx
+  [[ `uname` = 'Darwin' ]] && plugins+=macos
 
   source $ZSH/oh-my-zsh.sh
 else
@@ -42,6 +42,7 @@ bindkey '^[OB' down-line-or-beginning-search
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # NVM
+# Using `n` instead: https://github.com/tj/n
 export NVM_DIR="$HOME/.nvm"
 [[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh" # Older version of NVM?
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
@@ -112,3 +113,6 @@ then
   # End:
   # vim: ft=zsh sw=2 ts=2 et
 fi
+
+export PNPM_HOME="/Users/alex/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
