@@ -1,3 +1,11 @@
+# brew completion
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
 
 # Oh My ZSH Config
 
@@ -114,5 +122,6 @@ then
   # vim: ft=zsh sw=2 ts=2 et
 fi
 
+# pnpm
 export PNPM_HOME="/Users/alex/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
