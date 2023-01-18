@@ -13,11 +13,32 @@ fi
 ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/config/oh-my-zsh
 
+# ZSH plugins. Other init files can add to these.
+plugins=()
+
+# Aliases, OS specific config, and local config.
+[[ -s $HOME/.zsh_aliases ]] && source $HOME/.zsh_aliases
+if [[ `uname` = 'Darwin' ]]
+then
+    [[ -s $HOME/.zshrc.osx ]] && source $HOME/.zshrc.osx
+    [[ -s $HOME/.zsh_aliases.osx ]] && source $HOME/.zsh_aliases.osx
+elif [[ `uname` = 'Linux' ]]
+then
+    [[ -s $HOME/.zshrc.linux ]] && source $HOME/.zshrc.linux
+    [[ -s $HOME/.zsh_aliases.linux ]] && source $HOME/.zsh_aliases.linux
+fi
+[[ -s $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
+[[ -s $HOME/.zsh_aliases.local ]] && source $HOME/.zsh_aliases.local
+
+# Host-specific config.
+[[ -s $ZSH_CUSTOM/hosts/`hostname -s`/zshrc ]] && source $ZSH_CUSTOM/hosts/`hostname -s`/zshrc
+
+# ZSH init
 if [[ -d $ZSH ]]
 then
   ZSH_THEME="alex"
   DISABLE_AUTO_TITLE="true"
-  plugins=(git bundler gem heroku rvm tmux)
+  plugins+=(git bundler gem heroku rvm tmux)
 
   [[ `uname` = 'Darwin' ]] && plugins+=macos
 
@@ -61,20 +82,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Pythonbrew
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
-
-# Aliases, OS specific config, and local config
-[[ -s $HOME/.zsh_aliases ]] && source $HOME/.zsh_aliases
-if [[ `uname` = 'Darwin' ]]
-then
-    [[ -s $HOME/.zshrc.osx ]] && source $HOME/.zshrc.osx
-    [[ -s $HOME/.zsh_aliases.osx ]] && source $HOME/.zsh_aliases.osx
-elif [[ `uname` = 'Linux' ]]
-then
-    [[ -s $HOME/.zshrc.linux ]] && source $HOME/.zshrc.linux
-    [[ -s $HOME/.zsh_aliases.linux ]] && source $HOME/.zsh_aliases.linux
-fi
-[[ -s $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
-[[ -s $HOME/.zsh_aliases.local ]] && source $HOME/.zsh_aliases.local
 
 [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
