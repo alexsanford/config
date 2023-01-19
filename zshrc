@@ -128,7 +128,3 @@ then
   # End:
   # vim: ft=zsh sw=2 ts=2 et
 fi
-
-# pnpm
-export PNPM_HOME="/Users/alex/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
