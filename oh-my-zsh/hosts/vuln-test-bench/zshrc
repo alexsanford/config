@@ -1,1 +1,1 @@
-plugins+=ddev-wp
+plugins+=(ddev-wp python-path)
