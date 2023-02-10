@@ -21,7 +21,7 @@ Plugin 'Sass'
 Plugin 'SuperTab'
 Plugin 'auto-pairs'
 Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'digitaltoad/vim-pug'
+"Plugin 'digitaltoad/vim-pug'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'endwise.vim'
@@ -29,9 +29,9 @@ Plugin 'fugitive.vim'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'less.vim'
-Plugin 'liquid.vim'
+"Plugin 'liquid.vim'
 Plugin 'matchit.zip'
-Plugin 'michal-h21/vim-zettel'
+"Plugin 'michal-h21/vim-zettel'
 Plugin 'mxw/vim-jsx'
 Plugin 'nginx.vim'
 Plugin 'othree/html5.vim'
@@ -43,6 +43,7 @@ Plugin 'ruby-matchit'
 Plugin 'ruby.vim'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'surround.vim'
+Plugin 's3rvac/vim-syntax-yara'
 Plugin 'tagbar'
 Plugin 'tpope/vim-abolish'
 "Plugin 'vim-gitgutter'
@@ -179,3 +180,6 @@ augroup END
 
 let g:vimwiki_list = [{'auto_tags': 1}]
 let g:vimwiki_table_mappings = 0
+
+" Consider all .yar/.yara files to be YARA files.
+autocmd BufNewFile,BufRead *.yar,*.yara setlocal filetype=yara
