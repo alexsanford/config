@@ -16,8 +16,7 @@ ZSH_CUSTOM=$HOME/config/oh-my-zsh
 # ZSH plugins. Other init files can add to these.
 plugins=()
 
-# Aliases, OS specific config, and local config.
-[[ -s $HOME/.zsh_aliases ]] && source $HOME/.zsh_aliases
+# OS specific config, and local config.
 if [[ `uname` = 'Darwin' ]]
 then
     [[ -s $HOME/.zshrc.osx ]] && source $HOME/.zshrc.osx
@@ -46,6 +45,9 @@ then
 else
   echo 'PLEASE INSTALL OH MY ZSH (git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh)'
 fi
+
+# Aliases after omz setup.
+[[ -s $HOME/.zsh_aliases ]] && source $HOME/.zsh_aliases
 
 setopt interactivecomments
 
