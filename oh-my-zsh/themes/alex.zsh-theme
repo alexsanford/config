@@ -6,9 +6,16 @@ function precmd()
     RVM='%{$fg[yellow]%}$(rvm current)%{$reset_color%}'
     DATE=' {%{$fg[green]%}'`date +%H:%M:%S`'%{$reset_color%}}'
 
-    if git status &>/dev/null
+    if git rev-parse --is-inside-work-tree &>/dev/null
     then
-        GIT=' %{$reset_color%}[%{$fg[yellow]%}$(git_prompt_info)%{$reset_color%}]'
+        if [[ $OMZ_NOGIT != 1 ]]
+        then
+            git_prompt=$(git_prompt_info)
+        else
+            git_prompt="git:prompt-disabled"
+        fi
+
+        GIT=' %{$reset_color%}[%{$fg[yellow]%}${git_prompt}%{$reset_color%}]'
     else
         GIT=''
     fi
