@@ -5,7 +5,6 @@ alias task='ps auxw | head -n1 ; ps auxw | grep -v grep | grep'
 alias h='history | grep'
 alias cp='cp --preserve=mode,timestamps'
 alias pg='sudo -u postgres'
-alias ack='ack-grep'
 alias givm='gvim'
 alias lsd="echo \"DON'T DO DRUGS!!!\" ; ls"
 
