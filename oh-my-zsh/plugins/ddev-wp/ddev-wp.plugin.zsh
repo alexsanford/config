@@ -23,7 +23,7 @@ function wpps() {
 	fi
 
 
-	version=`wpp get --field=version directorist`
+	version=`wpp get --field=version $slug`
 	mkdir -p $PLUGINS_STORE_DIR/$slug/$version
 
 	rsync -aP --delete $PLUGINS_DIR/$slug/ $PLUGINS_STORE_DIR/$slug/$version/
