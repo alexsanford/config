@@ -6,6 +6,7 @@ function precmd()
     RVM='%{$fg[yellow]%}$(rvm current)%{$reset_color%}'
     DATE=' {%{$fg[green]%}'`date +%H:%M:%S`'%{$reset_color%}}'
 
+    # Git prompt
     if git rev-parse --is-inside-work-tree &>/dev/null
     then
         if [[ $OMZ_NOGIT != 1 ]]
@@ -20,8 +21,26 @@ function precmd()
         GIT=''
     fi
 
+    # Tor prompt
+    if which torsocks >/dev/null && torsocks show | grep libtorsocks.so >/dev/null
+    then
+        if [[ -n $TORSOCKS_ISOLATE_PID ]]
+        then
+            tor_prompt='TOR (isolated)'
+        elif [[ -n $TORSOCKS_USERNAME ]] && [[ -n $TORSOCKS_PASSWORD ]]
+        then
+            tor_prompt="TOR (user:$TORSOCKS_USERNAME)"
+        else
+            tor_prompt='TOR'
+        fi
+
+        TOR=' %{$reset_color%}[%{$fg[magenta]%}${tor_prompt}%{$reset_color%}]'
+    else
+        TOR=''
+    fi
+
     PROMPT="
-$HOST:$DIR$GIT$DATE
+$HOST:$DIR$GIT$TOR$DATE
 %# "
 }
 
