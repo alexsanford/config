@@ -3,4 +3,8 @@ alias gvim='mvim'
 [[ -f /Applications/MacVim.app/Contents/MacOS/Vim ]] && alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
 alias o='open'
 alias tailf='tail -f'
-unalias cp
+
+if alias cp >/dev/null
+then
+  unalias cp
+fi
