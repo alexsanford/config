@@ -51,6 +51,9 @@ fi
 
 setopt interactivecomments
 
+# Vim keybindings.
+set -o vi
+
 # Keys
 #bindkey -v "^S" push-line # (stash) push current command into buffer, then pull back
 
