@@ -16,6 +16,23 @@ ZSH_CUSTOM=$HOME/config/oh-my-zsh
 # ZSH plugins. Other init files can add to these.
 plugins=()
 
+# ZSH init
+if [[ -d $ZSH ]]
+then
+  ZSH_THEME="alex"
+  DISABLE_AUTO_TITLE="true"
+  plugins+=(git bundler gem heroku rvm tmux virtualenv)
+
+  [[ `uname` = 'Darwin' ]] && plugins+=macos
+
+  source $ZSH/oh-my-zsh.sh
+else
+  echo 'PLEASE INSTALL OH MY ZSH (git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh)'
+fi
+
+# Aliases after omz setup.
+[[ -s $HOME/.zsh_aliases ]] && source $HOME/.zsh_aliases
+
 # OS specific config, and local config.
 if [[ `uname` = 'Darwin' ]]
 then
@@ -32,22 +49,6 @@ fi
 # Host-specific config.
 [[ -s $ZSH_CUSTOM/hosts/`hostname -s`/zshrc ]] && source $ZSH_CUSTOM/hosts/`hostname -s`/zshrc
 
-# ZSH init
-if [[ -d $ZSH ]]
-then
-  ZSH_THEME="alex"
-  DISABLE_AUTO_TITLE="true"
-  plugins+=(git bundler gem heroku rvm tmux)
-
-  [[ `uname` = 'Darwin' ]] && plugins+=macos
-
-  source $ZSH/oh-my-zsh.sh
-else
-  echo 'PLEASE INSTALL OH MY ZSH (git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh)'
-fi
-
-# Aliases after omz setup.
-[[ -s $HOME/.zsh_aliases ]] && source $HOME/.zsh_aliases
 
 setopt interactivecomments
 
@@ -130,3 +131,7 @@ then
   # End:
   # vim: ft=zsh sw=2 ts=2 et
 fi
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/alex/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
