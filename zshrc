@@ -7,6 +7,9 @@ then
   compinit
 fi
 
+# Add homebrew to path if it exists.
+[[ -s /opt/homebrew/bin/brew ]] && export PATH="/opt/homebrew/bin:$PATH"
+
 # Oh My ZSH Config
 
 # Path to your oh-my-zsh configuration.
