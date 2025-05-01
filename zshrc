@@ -141,3 +141,5 @@ fi
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/alex/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+: undercover && export PS1='C:${PWD//\//\\}> '
+: undercover && new_line_before_prompt=no
