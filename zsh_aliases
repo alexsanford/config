@@ -99,6 +99,7 @@ alias a2='sudo service apache2'
 
 # Utils
 alias port='sudo lsof -i -n -P | grep TCP | grep '
+alias urlencode='python3 -c "import urllib.parse, sys; print(urllib.parse.quote(sys.argv[1]))"'
 
 # Docker
 alias dr='docker run -it --rm -v ${PWD}:/app -w /app '
