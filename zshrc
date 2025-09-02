@@ -10,6 +10,9 @@ fi
 # Add homebrew to path if it exists.
 [[ -s /opt/homebrew/bin/brew ]] && export PATH="/opt/homebrew/bin:$PATH"
 
+# Host-specific initialization pre-omz.
+[[ -s $ZSH_CUSTOM/hosts/`hostname -s`/before-omz ]] && source $ZSH_CUSTOM/hosts/`hostname -s`/before-omz
+
 # Oh My ZSH Config
 
 # Path to your oh-my-zsh configuration.

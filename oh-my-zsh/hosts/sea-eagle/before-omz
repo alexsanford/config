@@ -1,0 +1,2 @@
+export SSH_ASKPASS=/opt/homebrew/bin/ssh-askpass
+export DISPLAY=":0"
