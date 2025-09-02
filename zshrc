@@ -26,6 +26,9 @@ then
   DISABLE_AUTO_TITLE="true"
   plugins+=(git bundler gem heroku rvm tmux virtualenv)
 
+  # Host-specific plugins.
+  [[ -s $ZSH_CUSTOM/hosts/`hostname -s`/omz-plugins ]] && source $ZSH_CUSTOM/hosts/`hostname -s`/omz-plugins
+
   [[ `uname` = 'Darwin' ]] && plugins+=macos
 
   source $ZSH/oh-my-zsh.sh
