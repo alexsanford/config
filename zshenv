@@ -22,3 +22,6 @@ fi
 
 [[ -d /usr/local/rvm/bin ]] && export PATH=/usr/local/rvm/bin:$PATH # Add RVM to PATH for scripting
 [[ -d ~/.rvm/bin ]] && export PATH=~/.rvm/bin:$PATH # Add RVM to PATH for scripting
+
+# Keys
+bindkey '^Q' push-line

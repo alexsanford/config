@@ -141,9 +141,6 @@ then
   # vim: ft=zsh sw=2 ts=2 et
 fi
 
-# Keys
-bindkey -v "^Q" push-line # (stash) push current command into buffer, then pull back
-
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/alex/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
