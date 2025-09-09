@@ -64,9 +64,6 @@ setopt interactivecomments
 # Vim keybindings.
 set -o vi
 
-# Keys
-bindkey -v "^Q" push-line # (stash) push current command into buffer, then pull back
-
 # Too annoying
 unsetopt correct_all
 unsetopt nomatch
@@ -143,6 +140,9 @@ then
   # End:
   # vim: ft=zsh sw=2 ts=2 et
 fi
+
+# Keys
+bindkey -v "^Q" push-line # (stash) push current command into buffer, then pull back
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/alex/.rd/bin:$PATH"
