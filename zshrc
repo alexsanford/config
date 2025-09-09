@@ -65,7 +65,7 @@ setopt interactivecomments
 set -o vi
 
 # Keys
-#bindkey -v "^S" push-line # (stash) push current command into buffer, then pull back
+bindkey -v "^Q" push-line # (stash) push current command into buffer, then pull back
 
 # Too annoying
 unsetopt correct_all
