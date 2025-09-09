@@ -1,4 +1,6 @@
 # Set up SSH with Yubikeys
-
 ssh-add ~/.ssh/id_ed25519_sk_yk5c
 ssh-add ~/.ssh/id_ed25519_sk_yk5nfc
+
+# Set up GPG
+export GPG_TTY=$(tty)
