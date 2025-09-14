@@ -10,14 +10,14 @@ fi
 # Add homebrew to path if it exists.
 [[ -s /opt/homebrew/bin/brew ]] && export PATH="/opt/homebrew/bin:$PATH"
 
-# Host-specific initialization pre-omz.
-[[ -s $ZSH_CUSTOM/hosts/`hostname -s`/before-omz ]] && source $ZSH_CUSTOM/hosts/`hostname -s`/before-omz
-
 # Oh My ZSH Config
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/config/oh-my-zsh
+
+# Host-specific initialization pre-omz.
+[[ -s $ZSH_CUSTOM/hosts/`hostname -s`/before-omz ]] && source $ZSH_CUSTOM/hosts/`hostname -s`/before-omz
 
 # ZSH plugins. Other init files can add to these.
 plugins=()
