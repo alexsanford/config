@@ -1,7 +1,7 @@
 #! /bin/zsh
 
 alias al='vim ~/.zsh_aliases ; . ~/.zsh_aliases'
-alias task='ps auxw | head -n1 ; ps auxw | grep -v grep | grep'
+alias task='ps auxw | head -n1 ; ps auxw | grep -v grep | grep -i'
 alias h='history | grep'
 alias cp='cp --preserve=mode,timestamps'
 alias pg='sudo -u postgres'

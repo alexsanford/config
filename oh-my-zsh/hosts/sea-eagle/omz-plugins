@@ -1,1 +1,2 @@
-plugins+=(ddev-wp python-path ssh-agent)
+# plugins+=(ddev-wp python-path ssh-agent)
+plugins+=(ddev-wp python-path)

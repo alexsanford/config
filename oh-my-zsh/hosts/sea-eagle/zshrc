@@ -1,6 +1,36 @@
-# Set up SSH with Yubikeys
-ssh-add ~/.ssh/id_ed25519_sk_yk5c
-ssh-add ~/.ssh/id_ed25519_sk_yk5nfc
+# Set up OpenSSH agent with Yubikeys
+YUBIKEY_AGENT_SOCK="$HOME/.ssh/sockets/yubikey-agent.sock"
+export SSH_AUTH_SOCK="$YUBIKEY_AGENT_SOCK"
+ssh-add -l &>/dev/null
+code=$?
+if [ $code -eq 2 ] || ! [ -S "$YUBIKEY_AGENT_SOCK" ]
+then
+  mkdir -p "$HOME/.ssh/sockets"
+  eval $(ssh-agent -s -a "$YUBIKEY_AGENT_SOCK") &>/dev/null
+fi
+
+ssh-add ~/.ssh/id_ed25519_sk_yk5c &>/dev/null
+ssh-add ~/.ssh/id_ed25519_sk_yk5nfc &>/dev/null
+
+# Set up Secretive ssh agent
+export SSH_AUTH_SOCK="$HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh"
+
+function use_ssh_agent() {
+	case $1 in
+		"secretive")
+			export SSH_AUTH_SOCK="$HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh"
+			echo "Using Secretive SSH agent"
+		;;
+
+		"yubikey")
+			export SSH_AUTH_SOCK="$YUBIKEY_AGENT_SOCK"
+			echo "Using Yubikey SSH agent"
+		;;
+
+		*)
+			echo "Usage: use_ssh_agent <secretive|yubikey>"
+	esac
+}
 
 # Set up GPG
 export GPG_TTY=$(tty)

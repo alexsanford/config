@@ -1,0 +1,2 @@
+ssh-add ~/.ssh/id_ed25519_sk_yk5c &>/dev/null
+ssh-add ~/.ssh/id_ed25519_sk_yk5nfc &>/dev/null
