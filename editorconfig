@@ -16,4 +16,3 @@ indent_size = 4
 [*.{yml,yaml,rb}]
 indent_style = space
 indent_size = 2
-
