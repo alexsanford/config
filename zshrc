@@ -34,6 +34,9 @@ then
 
   [[ `uname` = 'Darwin' ]] && plugins+=macos
 
+  # Fix git prompt (see https://github.com/ohmyzsh/ohmyzsh/issues/12328)
+  zstyle ':omz:alpha:lib:git' async-prompt force
+
   source $ZSH/oh-my-zsh.sh
 else
   echo 'PLEASE INSTALL OH MY ZSH (git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh)'
