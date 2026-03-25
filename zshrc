@@ -114,7 +114,10 @@ if [[ -d $PYENV_ROOT/bin ]]
 then
   export PATH="$PYENV_ROOT/bin:$PATH"
 fi
-eval "$(pyenv init - zsh)"
+if which pyenv >/dev/null
+then
+  eval "$(pyenv init - --no-rehash zsh)"
+fi
 
 # Tmuxinator completion
 if which tmuxinator >/dev/null
