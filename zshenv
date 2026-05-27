@@ -1,7 +1,7 @@
 
 export EDITOR=vim
 export PAGER=less
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/bin:$HOME/.local/bin
 
 # Ruby stuff
 #if [[ -s "$HOME/.ruby/mystuff.rb" ]]
