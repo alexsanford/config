@@ -5,3 +5,8 @@ if [ $? -eq 2 ]; then
     rm -f "$SSH_AUTH_SOCK"
     /opt/homebrew/bin/ssh-agent -a "$SSH_AUTH_SOCK" >/dev/null
 fi
+
+# wmf-claude setup
+export VHR_REPO=$HOME/code/wmf/gitlab/product-safety-and-integrity/vulnhunt-record
+export VHR_AGE_KEY_FILE=$HOME/.config/vhr/age.key
+export VHR_RECIPIENTS_FILE=$HOME/.config/vhr/recipients
