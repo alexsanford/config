@@ -17,3 +17,6 @@ export VHR_REPO=$HOME/code/wmf/gitlab/product-safety-and-integrity/vulnhunt-reco
 export VHR_AGE_KEY_FILE=$HOME/.config/vhr/age.key
 export VHR_RECIPIENTS_FILE=$HOME/.config/vhr/recipients
 export PATH="$HOME/code/wmf/gitlab/product-safety-and-integrity/wmf-claude/bin:$HOME/code/wmf/gitlab/product-safety-and-integrity/wmf-security-skills/bin:$PATH"
+
+# Default VM
+export WMF_CLAUDE_VM=wmf-claude-cvp
